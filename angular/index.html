@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- bootsrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet" />
+ 
+    <!-- anuglar -->
+    <script src="js/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    
+      <div class="header">
+        <div class="container">
+          <h1>Book End</h1>
+        </div>
+      </div>
+
+      <div class=" container main" ng-controller="MainController">
+        <div class="continer">
+            <h1>{{ title }}</h1>
+            <h2>{{ promo }}</h2>
+
+            <div class="col-md-6" ng-repeat="product in products ">
+                <div class="thumbnail">
+                    <product-info info="books"></product-info>
+
+
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="container">
+          <h2>Available for iPhone and Android.</h2>
+          <img src="img/app-store.png" width="120px" />
+          <img src="img/google-play.png" width="110px" />
+        </div>
+      </div>
+
+
+
+
+    <!-- Modules -->
+
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+
+          <!--directives-->
+          <script src="js/product.js"></script>
+
+  </body>
+</html>
